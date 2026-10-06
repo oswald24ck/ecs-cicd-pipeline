@@ -1,4 +1,4 @@
-name: Build Push Image
+name: Build and Push Image
 
 on:
   push:
@@ -27,6 +27,7 @@ jobs:
 
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
+        id: login.ecr
 
       - name: Build Docker Image
         run: |
@@ -40,4 +41,4 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push \
-          ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:latest        
+          ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:latest
