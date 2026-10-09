@@ -21,16 +21,22 @@ No long-lived AWS access keys
 
 
 # 1 - Successful GitHub Actions workflow.
+The below figure depicts a successfully run CI/CD pipeline through GitHub Actions. This shows how the automated process of building Docker images, deploying them on Amazon ECR and pushing the application on Amazon ECS is done.
+<br><br>
 
 <img width="1887" height="913" alt="github-actions-success" src="https://github.com/user-attachments/assets/3e57b31a-c13a-4415-920d-c76e63300b7a" />
 <br><br>
 
 # 2 - Docker image in Amazon ECR.
+The following image illustrates that the Docker image is correctly placed on the Amazon Elastic Container Registry (ECR). The screenshot displays the image and the tag that is used in the process of placing the image on ECR through the CI/CD pipeline.
+<br><br>
 
 <img width="1581" height="723" alt="ecr-docker-image" src="https://github.com/user-attachments/assets/302a6564-e734-489e-aa53-17b243b6acb8" />
 <br><br>
 
 # 3 - ECS service showing running tasks.
+The following image is proof that the Amazon ECS service has started successfully, with some container tasks active on the AWS Fargate service. This is an example of the successful running of the application, where the ECS is handling the containers during the CI/CD process.
+<br><br>
 
 <img width="1590" height="715" alt="ecs-running-tasks" src="https://github.com/user-attachments/assets/8376c4ff-b62e-4f1c-ace0-840a61d76d7d" />
 <br><br>
